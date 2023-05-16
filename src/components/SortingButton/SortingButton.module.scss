@@ -1,0 +1,25 @@
+.form_sort {
+  width: 70%;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #ffffff;
+  .form_sort__button {
+    width: 14rem;
+    height: calc(2.25rem + 2px);
+    border: none;
+
+    color: white;
+    background-color: #ff8f52;
+    &:hover {
+      opacity: 0.9;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}

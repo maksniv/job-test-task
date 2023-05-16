@@ -1,18 +1,19 @@
+@import 'src/styles/variables';
+
 .navbar {
   width: 100%;
   height: 8rem;
-  margin-bottom: 2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #ffffff;
+  background-color: $backgroundColorWhite;
   .navbar__title {
-    color: black;
+    color: $black;
     font-size: 5rem;
     span {
-      color: #ff8f52;
+      color: $orange;
     }
   }
 }

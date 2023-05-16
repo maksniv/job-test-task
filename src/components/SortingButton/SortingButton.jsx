@@ -1,13 +1,26 @@
 import styles from './SortingButton.module.scss';
+import { useState } from 'react';
 
-function SortingButton() {
+function SortingButton({ sortCars }) {
+  const [radioButtonValue, setRadioButtonValue] = useState('up');
+
+  const changeValue = (event) => {
+    setRadioButtonValue(event.target.value);
+  };
+
   return (
     <>
-      <form className={styles.form_sort}>
-        <button className={styles.form_sort__button}>
+      <div className={styles.form_sort}>
+        <button
+          className={styles.form_sort__button}
+          onClick={() => sortCars('year', radioButtonValue)}
+        >
           Сортировать по году выпуска
         </button>
-        <button className={styles.form_sort__button}>
+        <button
+          className={styles.form_sort__button}
+          onClick={() => sortCars('price', radioButtonValue)}
+        >
           Сортировать по стоимости
         </button>
         <label className={styles.form_sort__label}>
@@ -16,8 +29,10 @@ function SortingButton() {
             name="sort"
             value="up"
             className={styles.form_sort__input}
+            checked={radioButtonValue === 'up' ? true : false}
+            onChange={changeValue}
           />
-          По возрастанию
+          <span className={styles.form_sort__span}>По возрастанию</span>
         </label>
         <label className={styles.form_sort__label}>
           <input
@@ -25,10 +40,12 @@ function SortingButton() {
             name="sort"
             value="down"
             className={styles.form_sort__input}
+            checked={radioButtonValue === 'down' ? true : false}
+            onChange={changeValue}
           />
-          По убыванию
+          <span className={styles.form_sort__span}>По убыванию</span>
         </label>
-      </form>
+      </div>
     </>
   );
 }

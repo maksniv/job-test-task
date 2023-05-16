@@ -1,11 +1,14 @@
+@import 'src/styles/variables';
+
 .card_field {
   width: 70%;
   height: 100%;
+  padding: 2rem;
 
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 
-  background-color: #ffffff;
+  background-color: $backgroundColorWhite;
 }

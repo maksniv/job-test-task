@@ -1,11 +1,39 @@
 import styles from './Card.module.scss';
+import { useState } from 'react';
+import Modal from '../Modal/Modal.jsx';
 
-function Card({ id, name, model, year, color, price, latitude, longitude }) {
+function Card({
+  id,
+  name,
+  model,
+  year,
+  color,
+  price,
+  latitude,
+  longitude,
+  removeCar,
+}) {
+  const [modal, setModal] = useState(false);
+
   return (
     <>
-      <div className={styles.card}>
+      <Modal
+        modal={modal}
+        setModal={setModal}
+        id={id}
+        name={name}
+        model={model}
+        year={year}
+        color={color}
+        price={price}
+        latitude={latitude}
+        longitude={longitude}
+        removeCar={removeCar}
+      />
+      <div className={styles.card} id={id}>
         <img
-          className={styles.card__poster} alt={name}
+          className={styles.card__poster}
+          alt={name}
           src={`https://placehold.co/260x200?text=${
             name + ' ' + model
           }&font=Oswald`}
@@ -14,11 +42,11 @@ function Card({ id, name, model, year, color, price, latitude, longitude }) {
           <div className={styles.card__name}>
             {name} {model}
           </div>
-          {/* <div className={styles.card__year}>{year}</div>
-          <div className={styles.card__color}>{color}</div> */}
           <div className={styles.card__price}>{price}</div>
         </div>
-        <button className={styles.card__button}>Подробнее</button>
+        <button className={styles.card__button} onClick={() => setModal(true)}>
+          Подробнее
+        </button>
       </div>
     </>
   );

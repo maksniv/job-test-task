@@ -17,12 +17,20 @@ function CardField() {
     } else {
       setCars((prev) => [...prev.sort((a, b) => b[sortName] - a[sortName])]);
     }
-    console.log(sortName, sortIn);
+  };
+
+  const updateCarDescription = (id, name, model, price) => {
+    setCars((prevState) =>
+      prevState.map((car) =>
+        car.id === id ? { ...car, name: name, model: model, price: price } : car
+      )
+    );
   };
 
   const loadingCarsDescription = async () => {
     const carsDescription = await getCarsDescription();
     setCars(carsDescription);
+    console.log(carsDescription);
   };
 
   useEffect(() => {
@@ -46,6 +54,7 @@ function CardField() {
               latitude={car.latitude}
               longitude={car.longitude}
               removeCar={removeCar}
+              updateCarDescription={updateCarDescription}
             ></Card>
           );
         })}

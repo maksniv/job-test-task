@@ -15,7 +15,7 @@ function SortingButton({ sortCars }) {
           className={styles.form_sort__button}
           onClick={() => sortCars('year', radioButtonValue)}
         >
-          Сортировать по году выпуска
+          Сортировать по году
         </button>
         <button
           className={styles.form_sort__button}

@@ -23,11 +23,18 @@
     align-items: space-around;
     justify-content: space-around;
     .card__name {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 0.0125rem;
     }
     .card__price {
-      font-size: 1rem;
-      font-weight: bold;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.0125rem;
+    }
+    .card__year {
+      font-size: 0.9rem;
+      font-weight: 500;
       letter-spacing: 0.0125rem;
     }
   }

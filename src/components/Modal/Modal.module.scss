@@ -44,6 +44,7 @@
   flex-direction: row;
   gap: 30px;
   font-size: 1.2rem;
+  letter-spacing: 0.0125rem;
   .modal__card__poster {
     width: 50%;
   }
@@ -53,10 +54,16 @@
       width: 80%;
       height: 1.6rem;
       padding-left: 5px;
-      border: 1px solid $backgroundColorDarkGray;
-      border-radius: 0.1rem;
-      background-color: inherit;
+      border: none;
+      // border: 1px solid $backgroundColorDarkGray;
+      // border-radius: 0.1rem;
+      background-color: $backgroundColorGray;
+      // background-color: inherit;
       margin-bottom: 0.1rem;
+      &:focus {
+        border: none;
+        outline: none;
+      }
     }
     .modal__card__map {
       width: 100%;

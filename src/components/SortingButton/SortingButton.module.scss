@@ -62,3 +62,13 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  .form_sort {
+    height: 12rem;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+}

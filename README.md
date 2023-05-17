@@ -1,3 +1,15 @@
-# Getting Started with Create React App
+# CarsShops - Сайт просмотра машин
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPA приложение, тестовое задание. Реализовано:
+
+1. Получение с сервера данных о машинах и отображение их в виде объявление,
+2. Адаптивный дизайн,
+3. Сортировка и удаление объявлений,
+4. Отображение местораположения машины,
+5. Редактирование данных в объявлении.
+
+## Стек технологий
+
+- React
+- SCSS
+- React Yandex Map

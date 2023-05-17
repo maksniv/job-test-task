@@ -30,7 +30,6 @@ function CardField() {
   const loadingCarsDescription = async () => {
     const carsDescription = await getCarsDescription();
     setCars(carsDescription);
-    console.log(carsDescription);
   };
 
   useEffect(() => {

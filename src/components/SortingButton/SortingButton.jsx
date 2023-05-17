@@ -31,6 +31,7 @@ function SortingButton({ sortCars }) {
             className={styles.form_sort__input}
             checked={radioButtonValue === 'up' ? true : false}
             onChange={changeValue}
+            autoFocus
           />
           <span className={styles.form_sort__span}>По возрастанию</span>
         </label>
